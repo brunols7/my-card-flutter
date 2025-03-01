@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -39,48 +40,48 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Source Code Pro'
                 )
               ),
-              Container(
+                            SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                )
+              ),
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal.shade900,
-                    ),
-                    SizedBox(width: 10),
-                    Text('11 99332-4970',
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+55 (11) 99999-9999',
                     style: TextStyle(
                       color: Colors.teal.shade900,
                       fontSize: 18,
                       fontFamily: 'Source Code Pro'
                     )
-                    )
-                  ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10),
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'bruno@gmail.com',
+                    style: TextStyle(
                       color: Colors.teal.shade900,
+                      fontSize: 18,
+                      fontFamily: 'Source Code Pro'
                     ),
-                    SizedBox(width: 10),
-                    Text(
-                      'bruno.lsilva1508@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontSize: 18,
-                        fontFamily: 'Source Code Pro'
-                      )
-                    )
-                  ],
-                )
+                  )
+                ),
               ),
             ],
           )
